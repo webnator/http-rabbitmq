@@ -49,6 +49,9 @@
     "uuid": "3.1.0",
     "pino": "4.14.0"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "eslint": "^4.9.0",
     "eslint-plugin-jest": "^21.2.0",

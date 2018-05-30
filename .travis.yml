@@ -1,11 +1,20 @@
 language: node_js
 services:
-  - docker
+- docker
 install:
-  - docker build -t rabbitmq ./images/RabbitMQ
-  - docker run -d --rm --env-file ./bin/.env -p 5779:5672 -p 15779:15672 --name rabbit-lib-test rabbitmq
-  - sleep 5
+- docker build -t rabbitmq ./images/RabbitMQ
+- docker run -d --rm --env-file ./bin/.env -p 5779:5672 -p 15779:15672 --name rabbit-lib-test
+  rabbitmq
+- sleep 5
 before_script:
-  - npm i
+- npm i
 script:
-  - npm run test
+- npm run test
+deploy:
+  provider: npm
+  email: webnator@gmail.com
+  api_key:
+    secure: LYLybvs4btFvEZqqsba3BFR/tAkN1Loh3YTlB4OLgAdabMGIoR2komCWXD3UR3jUG5XclDVanvypG60LgiaB0Vb8Btd8Q6matk7slr/MLDYKX3MLguYwT42yqgj1uiO244bEqEcM2KBTW8TBjNlkchgwWLX+R45Qgg9B0M6RjfHnNFia4SlCYFiwQnehzOQMEcmlFwobh6Zc2Nua1cV6GAZtwPK2O1WaE9+fX9pmQPnbDV5NUWh0AbU9t1RTTwsHHbR2kegmaVPRiEjiivxYQoPzT9ZXBFWcwaQNMIejxeZCIzFgvgVwLLz/x9mmCbSeZZhv4C1ro/jcMGeP2BpZJSXh8eY5XUvp9CZcu7204sY+nnU8iRG7BVf2L/fTi7KFikaOdUb6Khfaiz5+DFLukw/ptlAabSHyGoOoJDMFs3oMxcf7n1nE8IfN3LRCWEUK1YOlrs3FzFoAuQd8hacNT70Yu9YiHhzuSCfLVCAyO9i0BWrTPPpTIPnFcYXV3+ZIXRQoNVjFev8+9psglcCToGVy++zZ827vuY8IWBKpZQKivsj5toV5k3vb0ONgobBLptQm0kAxbm1Gqd4zuTl9Ff7kIpaTKPcUJI3+WT6rYymc10ytW8vbqRcUwoIJje34tiYU5L1395Gxy8vpXUfopmBM6CJYLa1u2XLBSCP6YVM=
+  on:
+    tags: true
+    repo: webnator/maestro-rabbit

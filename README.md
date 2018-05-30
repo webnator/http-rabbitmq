@@ -3,6 +3,7 @@
 An awesome RabbitMQ Library for the Hapi ecosystem to work seamlessly with
  rabbit queues as if they were regular HTTP calls.
 
+[![Build Status](https://api.travis-ci.com/webnator/maestro-rabbit.svg?branch=master)](https://api.travis-ci.com/webnator/maestro-rabbit)
 
 Lead Maintainer: [webnator](https://github.com/webnator)
 
