@@ -205,7 +205,7 @@ The library initialization method, it accepts the following parameters:
   * user: The user to authenticate in the queue __required__,
   * pass: The password to authenticate in the queue __required__,
   * vhost: The rabbitMQ vhost (Usually '/') __required__,
-  * exchange: The rabbitMQ exchange (Usually 'denizen_exchange') __required__,
+  * exchange: The rabbitMQ exchange __required__,
   * errorQueue: The queue where to output the errors for unprocessed incoming calls (Usually 'test-error') __required__,
   * errorTopic: The topic (routing key) where to output the error (Usually error.MICROSERVICE_NAME) __required__,
   * prefetch: _Defaults to 1_,
