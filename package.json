@@ -1,0 +1,70 @@
+{
+  "name": "maestro-rabbit",
+  "version": "1.0.0",
+  "description": "Library to seamlessly handle connections with RabbitMQ",
+  "author": {
+    "name": "Williams A Aguilera",
+    "email": "webnator@gmail.com",
+    "url": "https://github.com/webnator/"
+  },
+  "contributors": [
+    {
+      "name": "Williams Aguilera",
+      "email": "webnator@gmail.com"
+    },
+    {
+      "name": "Javier Moure",
+      "email": "jmouretribaldos@gmail.com",
+      "url": "https://github.com/mdemou/"
+    }
+  ],
+  "scripts": {
+    "start": "node lib/index.js",
+    "lint": "eslint --fix --ignore-path .gitignore .",
+    "predeploy": "echo im about to deploy",
+    "postdeploy": "echo ive deployed",
+    "pretest": "rm -rf coverage || true",
+    "test": "nyc --reporter=text --reporter=text-summary --reporter=html node tests"
+  },
+  "nyc": {
+    "include": [
+      "./lib/**/*.js"
+    ]
+  },
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webnator/maestro-rabbit.git"
+  },
+  "keywords": [
+    "rabbit",
+    "hapiJS"
+  ],
+  "dependencies": {
+    "amqplib": "0.5.2",
+    "awilix": "3.0.6",
+    "delay": "2.0.0",
+    "hoek": "5.0.3",
+    "joi": "10.2.2",
+    "uuid": "3.1.0",
+    "pino": "4.14.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-plugin-jest": "^21.2.0",
+    "istanbul": "^0.4.5",
+    "nyc": "^11.6.0",
+    "require-all": "^2.2.0",
+    "requireall": "^1.0.0",
+    "tape": "^4.9.0"
+  },
+  "preferGlobal": false,
+  "analyze": true,
+  "license": "MIT",
+  "files": [
+    "lib",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "homepage": "https://github.com/webnator/maestro-rabbit#readme"
+}
