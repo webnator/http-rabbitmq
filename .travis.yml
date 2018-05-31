@@ -7,6 +7,7 @@ install:
   rabbitmq
 - sleep 5
 before_script:
+- npm install -g npm@'>=2.13.5'
 - npm i
 script:
 - npm run test
