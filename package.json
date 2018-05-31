@@ -1,6 +1,6 @@
 {
   "name": "maestro-rabbit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Library to seamlessly handle connections with RabbitMQ",
   "author": {
     "name": "Williams A Aguilera",
