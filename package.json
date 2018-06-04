@@ -38,7 +38,17 @@
   },
   "keywords": [
     "rabbit",
-    "hapiJS"
+    "hapiJS",
+    "rabbitMQ",
+    "queue",
+    "API",
+    "REST",
+    "queue",
+    "asyn",
+    "hapi",
+    "job",
+    "tasks",
+    "pubsub"
   ],
   "dependencies": {
     "amqplib": "0.5.2",
