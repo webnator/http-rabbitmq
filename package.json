@@ -34,7 +34,7 @@
   "main": "./lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webnator/maestro-rabbit.git"
+    "url": "git+https://github.com/webnator/http-rabbitmq.git"
   },
   "keywords": [
     "rabbit",
@@ -79,5 +79,5 @@
     "LICENSE.md",
     "README.md"
   ],
-  "homepage": "https://github.com/webnator/maestro-rabbit#readme"
+  "homepage": "https://github.com/webnator/http-rabbitmq#readme"
 }

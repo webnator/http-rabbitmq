@@ -3,7 +3,7 @@
 An awesome RabbitMQ Library for the Hapi ecosystem to work seamlessly with
  rabbit queues as if they were regular HTTP calls.
 
-[![Build Status](https://api.travis-ci.com/webnator/maestro-rabbit.svg?branch=master)](https://api.travis-ci.com/webnator/maestro-rabbit)
+[![Build Status](https://api.travis-ci.com/webnator/http-rabbitmq.svg?branch=master)](https://api.travis-ci.com/webnator/http-rabbitmq)
 
 Lead Maintainer: [webnator](https://github.com/webnator)
 
@@ -24,7 +24,7 @@ manager that you should also check out now that you're here.
 
 Install with
 ```
-npm i maestro-rabbit
+npm i http-rabbitmq
 ```
 
 ### Publish only initialization
@@ -34,7 +34,7 @@ RabbitMQ connection parameters and this will initialize the connection and
 return the instance.
 
 ```
-const RabbitQueue  = require('maestro-rabbit');
+const RabbitQueue  = require('http-rabbitmq');
 const queueConfig = {
     host: 'localhost',
     port: '5672',
