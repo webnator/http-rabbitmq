@@ -1,7 +1,7 @@
 {
-  "name": "http-rabbitmq",
+  "name": "maestro-rabbit",
   "version": "1.0.8",
-  "description": "Library to seamlessly handle connections with RabbitMQ",
+  "description": "(changed name to http-rabbitmq) Library to seamlessly handle connections with RabbitMQ",
   "author": {
     "name": "Williams A Aguilera",
     "email": "webnator@gmail.com",

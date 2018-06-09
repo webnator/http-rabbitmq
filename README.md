@@ -7,6 +7,9 @@ An awesome RabbitMQ Library for the Hapi ecosystem to work seamlessly with
 
 Lead Maintainer: [webnator](https://github.com/webnator)
 
+### This library has changed name and is no longer mantained please go to
+ [http-rabbitmq](https://www.npmjs.com/package/http-rabbitmq)###
+
 ## Introduction
 
 The idea behind this library is to provide a simple and seamless interface
