@@ -1,6 +1,6 @@
 {
   "name": "http-rabbitmq",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Library to seamlessly handle connections with RabbitMQ",
   "author": {
     "name": "Williams A Aguilera",
