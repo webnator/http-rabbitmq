@@ -12,6 +12,7 @@ module.exports = {
     maxRetries: 5,
     timeBetweenRetries: 500,
     errorQueue: 'error',
-    errorTopic: 'error.test'
+    errorTopic: 'error.test',
+    delayed: false
   }
 };
