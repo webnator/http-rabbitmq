@@ -45,7 +45,8 @@ const queueConfig = {
     errorQueue: 'error',
     errorTopic: 'error.test',
     maxRetries: 3,
-    reconnectionTime: 2000
+    reconnectionTime: 2000,
+    delayed: false
 }
 
 const myConnection = await RabbitQueue.init({ queueConfig });
@@ -224,7 +225,8 @@ The library initialization method, it accepts the following parameters:
   * retryOptions: 
     * retries: The maximum times that the retry policy will try to send a message to the queue if there's an error _Defaults to 10_
     * time: The interval that the retry policy will use when trying to re-send a message to the queue if there's an error. In milliseconds _Defaults to 1000_
-* routes: The router file as described above.
+  * routes: The router file as described above.
+  * delayed: If delayed plugin is enabled in RabbitMQ
     
 
 
