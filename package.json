@@ -56,8 +56,8 @@
     "delay": "2.0.0",
     "hoek": "5.0.3",
     "joi": "10.2.2",
-    "uuid": "3.1.0",
-    "pino": "4.14.0"
+    "pino": "^4.14.0",
+    "uuid": "3.1.0"
   },
   "publishConfig": {
     "access": "public"

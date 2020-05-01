@@ -144,7 +144,7 @@ In order to publish into the queue we can use 2 functions:
 * __queueManager__()
 
 _publishHTTP_ is an implementation of the _publish_ method, that wraps
-and stringifies the received parameters, and afterwards calls the 
+and stringifies the received parameters, and afterwards calls the
 _publish_ function.
 
 #### .publishHTTP(String _key_, { Object _payload_, Object _headers_, Object _query_, Object _params_, String _traceId_ })
@@ -200,7 +200,7 @@ Returns the instance of the queue manager to work with its inner functions
 ## Configuration
 
 #### .init({ Object _queueConfig_[, Object _extraOptions_] [, Function _routes_]})
-The library initialization method, it accepts the following parameters: 
+The library initialization method, it accepts the following parameters:
 * queueConfig: The queue configuration, accepts the following paramenters:
   * host: The host to connect to __required__,
   * port: The port to connect to __required__,
@@ -209,12 +209,12 @@ The library initialization method, it accepts the following parameters:
   * vhost: The rabbitMQ vhost (Usually '/') __required__,
   * exchange: The rabbitMQ exchange __required__,
   * errorQueue: The queue where to output the errors for unprocessed incoming calls (Usually 'test-error') __required__,
-  * errorTopic: The topic (routing key) where to output the error (Usually error.MICROSERVICE_NAME) __required__,
+  * errorTopic: The topic (routing key) where to output the error (Usually error.SERVICE_NAME) __required__,
   * prefetch: _Defaults to 1_,
   * delaySeconds: _Defaults to 3000_,
   * reconnectionTime: _Defaults to 2000_,
-  * maxRetries: _Defaults to 5_,
-  * timeBetweenRetries: _Defaults to 3000
+  * maxRetries: _Defaults to 5_, // TODO take to extra route error retry
+  * timeBetweenRetries: _Defaults to 3000 // TODO take to extra route error retry
 * extraOptions: Object that Allows to set some extra options for the queue configuration, all parameters are optional
   * exchangeOptions: The settings to assert the rabbitMQ exchange [More Options](http://www.squaremobius.net/amqp.node/channel_api.html#api_reference)
     * durable: _Defaults to true_
@@ -222,11 +222,10 @@ The library initialization method, it accepts the following parameters:
     * noAck: _Defaults to false_
   * publisherOptions: The settings to publish into the rabbitMQ queue [More Options](http://www.squaremobius.net/amqp.node/channel_api.html#api_reference)
     * persistent: _Defaults to true_
-  * retryOptions: 
+  * retryOptions: // publish retry
     * retries: The maximum times that the retry policy will try to send a message to the queue if there's an error _Defaults to 10_
     * time: The interval that the retry policy will use when trying to re-send a message to the queue if there's an error. In milliseconds _Defaults to 1000_
-  * routes: The router file as described above.
-  * delayed: If delayed plugin is enabled in RabbitMQ
-    
+* routes: The router file as described above.
+
 
 
